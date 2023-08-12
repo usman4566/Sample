@@ -1,0 +1,684 @@
+@import "~react-dates/lib/css/_datepicker.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+body {
+  overflow-x: hidden;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/public/Home1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  position: absolute;
+  top: 12%;
+  left: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paradise {
+  font-family: "Palatino, 'Palatino Linotype', serif";
+  color: #dddddd;
+  text-align: center;
+}
+
+.hotel {
+  font-size: 14px;
+  font-family: "Arial, sans-serif";
+  color: #bbbbbb;
+  margin-top: 5px;
+}
+
+.purchase-button {
+  position: absolute !important;
+  top: 12% !important;
+  left: 80% !important;
+  background-color: #978667 !important;
+  color: white !important;
+  border-radius: 50px !important;
+  width: 13% !important;
+  height: 7% !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.purchase-button:hover {
+  background-color: white !important;
+  color: #978667 !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.demo-button {
+  background-color: #978667 !important;
+  color: white !important;
+  border-radius: 50px !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  white-space: nowrap;
+}
+
+.demo-button:hover {
+  background-color: white !important;
+  color: #978667 !important;
+}
+
+.other-button {
+  border-radius: 50px !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  white-space: nowrap;
+  border: 1px solid white !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.other-button:hover {
+  background-color: white !important;
+  color: #978667 !important;
+}
+
+.main_title_2 {
+  text-align: center;
+  padding: 50px 0;
+  color: #262626;
+  font-family: "Palatino, 'Palatino Linotype', serif";
+}
+
+.main_title_2 h2::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  background: #262626;
+  margin: 5px auto 20px;
+}
+
+.main_title_2 h2 {
+  font-size: 46px;
+  line-height: 56px;
+  color: #262626;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.main_title_2 p {
+  font-size: 25px;
+  color: #6f6f6f;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 0 40px;
+}
+
+.card-set {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.card {
+  width: 100%;
+  height: 350px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-text {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-family: "Palatino, 'Palatino Linotype', serif";
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offwhite-div {
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 50px 0;
+  color: #262626;
+  font-family: "Palatino, 'Palatino Linotype', serif";
+}
+
+.offwhite-div h2::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  background: #262626;
+  margin: 5px auto 20px;
+}
+
+.offwhite-div h2 {
+  font-size: 46px;
+  line-height: 56px;
+  color: #262626;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+}
+
+.review-box {
+  flex-basis: calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.star {
+  color: #f0c30f;
+}
+
+.review-content p {
+  margin-top: 10px;
+}
+
+.person-info {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.dark {
+  background-color: #262626;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  font-family: "Palatino, 'Palatino Linotype', serif";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark h2 {
+  font-size: 46px;
+  line-height: 56px;
+  color: white;
+  font-weight: 50;
+  margin-bottom: 30px;
+}
+
+.bold-price {
+  font-weight: 550;
+}
+
+.purchase2 {
+  background-color: white !important;
+  color: black !important;
+  border-radius: 50px !important;
+  width: 13% !important;
+  height: 7% !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  margin-top: 20px;
+}
+
+.purchase2:hover {
+  background-color: #978667 !important;
+  color: white !important;
+}
+
+.slider-container {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.slider-container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.slider-card {
+  width: calc(33.33% - 20px);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.portfolio-button {
+  text-align: right;
+  margin-top: 5%;
+  margin-right: 7%;
+}
+
+.portfolio {
+  background-color: #978667 !important;
+  color: white !important;
+  border-radius: 50px !important;
+  width: 13% !important;
+  height: 7% !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.portfolio:hover {
+  background-color: white !important;
+  color: #978667 !important;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #f9f9f9;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.my-slider .slider-container:first-child {
+  margin-top: 30px;
+}
+
+.input-container input,
+.number-field input {
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+.search-form-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #e4dfdf;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #e4dfdf;
+  width: auto;
+  overflow: visible;
+  height: 40px;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-container:focus-within {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.number-field {
+  flex-grow: 1;
+  border: none;
+  position: relative;
+  padding: 2px 10px;
+  font-size: 16px;
+  appearance: none;
+  background-color: transparent;
+  height: 50px;
+  width: 130px;
+}
+
+.decrement-button,
+.increment-button {
+  position: absolute;
+  background-color: rgb(219, 214, 214);
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #707070;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.increment-button {
+  right: 45px;
+}
+
+.decrement-button {
+  right: 10px; /* Adjusted to position it to the left of increment button */
+}
+
+.search-button {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #978667 !important;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: transform 0.3s ease;
+  height: 35px;
+}
+
+.search-button:hover {
+  background-color: white !important;
+  color: #978667 !important;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #707070;
+  display: block;
+  white-space: nowrap;
+}
+
+.DayPicker {
+  background-color: #e4dfdf;
+  border-radius: 10px;
+}
+
+.DateInput {
+  background-color: #e4dfdf;
+  height: 40px;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.DateInput_input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #707070;
+  background-color: transparent;
+  border: none;
+  padding: 2px 30px;
+  outline: none;
+  font-weight: bold;
+}
+
+.DateRangePicker_picker {
+  z-index: 10;
+  top: 50px !important;
+}
+
+.DateRangePickerInput_arrow {
+  background-color: #e4dfdf;
+}
+
+.DateRangePickerInput,
+.DateInput,
+.DateRangePicker {
+  border: none;
+  background-color: #e4dfdf;
+}
+
+/* Selected and Hovered Dates */
+.CalendarDay__selected,
+.CalendarDay__hovered_span,
+.CalendarDay__selected_span {
+  background-color: rgba(213, 210, 205, 0.7) !important;
+  color: white;
+  border: none;
+}
+
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background-color: rgba(90, 84, 75, 0.5);
+  color: white;
+}
+
+.CalendarMonthGrid {
+  transform: scale(0.9);
+  transform-origin: top left;
+}
+
+.CalendarDay {
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  background-color: #e4dfdf;
+  border: 1px solid #e4dfdf;
+}
+
+.CalendarMonth {
+  background-color: #e4dfdf;
+  padding: 0;
+  font-size: 10px;
+}
+
+.DayPicker_weekHeader {
+  font-size: 10px;
+}
+
+.DayPickerNavigation_button {
+  background-color: #e4dfdf !important;
+  border: none;
+}
+
+.DayPickerNavigation_svg {
+  fill: #707070;
+}
+
+.calendar-icon {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #707070;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .home {
+    height: 700px;
+  }
+
+  .home-text {
+    font-size: 30px;
+    white-space: wrap;
+  }
+
+  .paradise {
+    font-size: 25px;
+  }
+
+  .purchase-button {
+    display: none !important;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card-set {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .reviews-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .review-box {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+
+  .demo-button,
+  .other-button,
+  .portfolio,
+  .purchase2 {
+    width: 90% !important;
+    height: auto !important;
+    font-size: 10px !important;
+    padding: 5px 10px;
+  }
+
+  .main_title_2 h2 {
+    font-size: 24px;
+  }
+
+  .main_title_2 p {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .offwhite-div h2 {
+    font-size: 24px;
+  }
+
+  .dark h2 {
+    font-size: 24px;
+  }
+
+  .search-form-container {
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 70%; /* Adjust as necessary */
+    left: 10;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure it's above the image */
+    width: 90%; /* Utilize most of the screen width, with a little padding */
+  }
+
+  .input-container,
+  .input-container.number-input {
+    width: 100%; /* Take up full width */
+    justify-content: space-between; /* Distribute space between inner items */
+  }
+
+  .DateRangePicker,
+  .number-field {
+    width: 100%;
+  }
+
+  .field-label {
+    margin-bottom: 5px; /* Little space between label and its input */
+  }
+
+  .decrement-button,
+  .increment-button {
+    position: static;
+    margin: 0 5px; /* Add a little margin between buttons */
+  }
+
+  .calendar-icon {
+    position: static;
+    margin-left: 10px;
+  }
+
+  .search-button {
+    width: 100%;
+    margin-top: 10px; /* A little space from the previous element */
+  }
+}
+
+@media (min-width: 600px) {
+  .home {
+    height: 600px;
+  }
+
+  .home-text {
+    font-size: 42px;
+  }
+
+  .paradise {
+    font-size: 35px;
+  }
+
+  .reviews-container {
+    justify-content: space-between;
+  }
+
+  .review-box {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+  }
+}
